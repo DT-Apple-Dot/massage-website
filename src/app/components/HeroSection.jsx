@@ -90,7 +90,7 @@ const HeroSection = () => {
 
             <div className="lg:col-span-5 md:col-span-1">
               <div className="rounded-[32px] border border-gray-300 dark:border-white/10 p-6 shadow-lg dark:shadow-[0_40px_120px_-40px_rgba(15,23,42,0.85)] dark:backdrop-blur-xl bg-white dark:bg-slate-900/50 transition-colors">
-                <div className="rounded-[28px] bg-gradient-to-br from-amber-50 dark:from-[radial-gradient(circle_at_top_right,_rgba(251,191,36,0.16),_transparent_38%)] to-transparent dark:to-transparent dark:bg-linear-gradient-to-b dark:from-slate-900/80 dark:to-slate-900/80 p-8 transition-colors">
+                <div className="rounded-[28px] bg-gradient-to-br from-amber-50 to-transparent dark:from-[radial-gradient(circle_at_top_right,_rgba(251,191,36,0.16),_transparent_38%)] dark:to-transparent p-8 transition-colors">
                   <p className="text-xs uppercase tracking-[0.32em] text-amber-600 dark:text-amber-300 transition-colors">
                     Why choose us
                   </p>
