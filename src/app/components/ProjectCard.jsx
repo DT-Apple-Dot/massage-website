@@ -9,10 +9,14 @@ const ProjectCard = ({ imgUrl, title, description, prices = [] }) => {
   return (
     <>
       <div className="bg-gray-50 dark:bg-[#181818] rounded-xl overflow-hidden flex flex-col justify-between hover:shadow-xl hover:shadow-amber-500/20 dark:hover:shadow-amber-500/20 transition-shadow duration-300 border border-gray-200 dark:border-gray-800">
-        <div
-          className="h-48 sm:h-56 md:h-80 lg:h-96 rounded-t-xl relative group"
-          style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
-        ></div>
+        <div className="h-48 sm:h-56 md:h-64 lg:h-72 rounded-t-xl overflow-hidden relative group">
+          <img
+            src={imgUrl}
+            alt={title}
+            loading="lazy"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
 
         <div className="text-gray-900 dark:text-white px-6 pt-6 pb-8 flex-grow flex flex-col justify-between transition-colors">
           <div className="mb-6">

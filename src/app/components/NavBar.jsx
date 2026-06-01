@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
@@ -30,12 +31,15 @@ const Navbar = () => {
 
   return (
     <nav className="fixed mx-auto border border-gray-300 dark:border-[#33353F] top-0 left-0 right-0 z-10 bg-white dark:bg-[#121212] bg-opacity-100 transition-colors">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-gray-900 dark:text-white font-semibold"
-        >
-          LOGO
+      <div className="flex container flex-wrap items-center justify-between mx-auto px-4 py-1">
+        <Link href="/" className="inline-flex items-center bg-transparent">
+          <Image
+            src="/images/projects/logo.png"
+            alt="Grand Massage Logo"
+            width={240}
+            height={80}
+            className="h-20 sm:h-24 w-auto object-contain bg-transparent"
+          />
         </Link>
         <div className="flex items-center gap-4">
           <div className="mobile-menu block md:hidden">

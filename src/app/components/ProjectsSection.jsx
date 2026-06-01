@@ -55,6 +55,19 @@ const projectsData = [
       { duration: "120 minutes", price: "2500 Baht" },
     ],
   },
+  {
+    id: 5,
+    title: "Deep tissue massage",
+    description:
+      "A deep relaxation massage for the muscles. This massage techniques involve use of thumb and elbow for deep pressing. Pressure is rolled along muscles slowly and heavily to stimulate deeper muscle layers. The focus is on legs back & shoulders to help relieve locked-in muscle tension. This massage is a whole-body massage suitable for those who like moderate to heavy massage. Not recommended as a first massage experience.",
+    image: "/images/projects/Deep_Tissue_Massage.jpg",
+    tag: ["All", "Mobile"],
+    prices: [
+      { duration: "60 minutes", price: "2200 Baht" },
+      { duration: "90 minutes", price: "2400Baht" },
+      { duration: "120 minutes", price: "2500 Baht" },
+    ],
+  },
 ];
 
 const ProjectsSection = () => {

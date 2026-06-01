@@ -19,20 +19,20 @@ const HeroSection = () => {
             <div className="lg:col-span-7">
               <div className="relative overflow-hidden rounded-[32px] border border-gray-300 dark:border-white/10 p-8 shadow-lg dark:shadow-[0_40px_120px_-40px_rgba(15,23,42,0.85)] dark:backdrop-blur-xl bg-white dark:bg-slate-900/50 transition-colors">
                 <div className="mb-6 inline-flex rounded-full border border-gray-200 dark:border-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-gray-600 dark:text-slate-300 shadow-sm dark:shadow-slate-950/20 bg-gray-100 dark:bg-transparent transition-colors">
-                  Premium Outcall Massage
+                  Premium Bangkok Outcall Massage
                 </div>
 
                 <h1 className="text-gray-900 dark:text-white text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-rose-500">
-                    Hello, Welcome to
+                    Bangkok
                   </span>
                   <TypeAnimation
                     sequence={[
                       "GRAND MASSAGE",
                       2000,
-                      "THE BEST RELAX",
+                      "BANGKOK OUTCALL MASSAGE",
                       2000,
-                      "PREMIUM OUTCALL",
+                      "PREMIUM RELAXATION",
                       2000,
                     ]}
                     wrapper="span"
@@ -43,10 +43,10 @@ const HeroSection = () => {
                 </h1>
 
                 <p className="mt-8 max-w-2xl text-gray-700 dark:text-slate-300 text-lg md:text-xl leading-8 transition-colors">
-                  Experience ultimate relaxation delivered straight to your
-                  doorstep. Our professional outcall massage service brings
-                  comfort, hygiene, and premium care to your home, apartment, or
-                  hotel in Bangkok.
+                  Experience ultimate relaxation with Grand Massage, the top
+                  Bangkok massage and Bangkok outcall massage service. Our
+                  professional therapists bring premium care directly to your
+                  hotel, apartment, or home in Bangkok.
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center">

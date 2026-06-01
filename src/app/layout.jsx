@@ -5,25 +5,26 @@ import { Providers } from "./components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Grand Massage - Premium Outcall Massage Services in Bangkok",
+  title: "Bangkok Massage | Grand Massage Outcall Service in Bangkok",
   description:
-    "Experience ultimate relaxation with our professional outcall massage services in Bangkok. Thai massage, oil massage, aromatherapy, and four hands massage available.",
+    "Grand Massage delivers premium Bangkok massage and Bangkok outcall massage services to your hotel or home. Book expert therapists for Thai massage, oil massage, aromatherapy, and four hands massage.",
   keywords:
-    "massage Bangkok, outcall massage, Thai massage, oil massage, aromatherapy massage, professional massage Thailand",
+    "bangkok massage, bangkok outcall massage, grand massage, outcall massage Bangkok, Thai massage Bangkok, hotel massage Bangkok",
   author: "Grand Massage",
   robots: "index, follow",
   openGraph: {
-    title: "Grand Massage - Premium Outcall Massage Services",
+    title: "Bangkok Massage | Grand Massage Outcall Service",
     description:
-      "Professional outcall massage services delivered to your home or hotel in Bangkok.",
+      "Grand Massage delivers premium Bangkok outcall massage services directly to your hotel or home.",
     url: "https://yoursite.com",
     type: "website",
     image: "https://yoursite.com/images/projects/Slide1.jpg",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grand Massage - Premium Outcall Massage",
-    description: "Professional massage services in Bangkok.",
+    title: "Bangkok Massage | Grand Massage Outcall Service",
+    description:
+      "Premium Bangkok massage and outcall massage services for hotel and home guests.",
     image: "https://yoursite.com/images/projects/Slide1.jpg",
   },
   canonical: "https://yoursite.com",
@@ -41,7 +42,11 @@ export default function RootLayout({ children }) {
         <meta charSet="UTF-8" />
         <meta
           name="description"
-          content="Experience ultimate relaxation with our professional outcall massage services in Bangkok."
+          content="Grand Massage delivers premium Bangkok massage and Bangkok outcall massage services to your hotel or home."
+        />
+        <meta
+          name="keywords"
+          content="bangkok massage, bangkok outcall massage, grand massage, outcall massage Bangkok, Thai massage Bangkok, hotel massage Bangkok"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://yoursite.com" />
@@ -61,7 +66,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Grand Massage",
-              description: "Premium outcall massage services in Bangkok",
+              description:
+                "Grand Massage offers premium Bangkok massage and Bangkok outcall massage services delivered to your hotel or home.",
               url: "https://yoursite.com",
               telephone: "+66XXXXXXXXX",
               email: "info@grandmassage.com",
