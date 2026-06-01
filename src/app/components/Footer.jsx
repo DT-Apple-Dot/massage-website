@@ -45,6 +45,7 @@ const Footer = () => {
     "Oil Massage",
     "Aromatherapy",
     "Four Hands Massage",
+    "Deep Tissue Massage",
   ];
 
   return (
