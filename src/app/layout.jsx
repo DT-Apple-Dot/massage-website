@@ -184,7 +184,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta
           name="google-site-verification"
-          content="YOUR_GOOGLE_VERIFICATION_CODE"
+          content="XVQDPmlcXH8yXuE7tGuZLsyXBdeAoie6R1vdRgcYwOQ"
         />
 
         <link rel="icon" href="/favicon.ico" />
