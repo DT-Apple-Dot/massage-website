@@ -9,19 +9,18 @@ const BookingModal = ({ isOpen, onClose, title }) => {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-        <div className="max-w-2xl">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white transition-colors">
             Book {title}
           </h2>
-          <p className="mt-3 text-sm text-gray-700 dark:text-slate-400 transition-colors">
-            Choose your preferred social channel below, then message us to
-            reserve your session quickly and securely.
+          <p className="mt-2 text-sm text-gray-600 dark:text-slate-400 transition-colors">
+            Tap one of the channels below to start your booking instantly.
           </p>
         </div>
         <button
           onClick={onClose}
-          className="rounded-full border border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-900/80 p-3 text-gray-700 dark:text-slate-300 transition duration-200 hover:border-amber-500 dark:hover:border-amber-500 hover:text-gray-900 dark:hover:text-white"
+          className="rounded-full border border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-900/80 p-2 text-gray-700 dark:text-slate-300 transition duration-200 hover:border-amber-500 dark:hover:border-amber-500 hover:text-gray-900 dark:hover:text-white"
           aria-label="Close booking modal"
         >
           <FaTimes />
@@ -30,14 +29,8 @@ const BookingModal = ({ isOpen, onClose, title }) => {
 
       <BookingChannelGrid channels={bookingChannels} />
 
-      <div className="mt-8 grid gap-4 md:grid-cols-[1fr_260px]">
-        <div className="rounded-3xl border border-amber-500/20 bg-amber-50 dark:bg-amber-500/10 p-5 text-center text-sm text-gray-700 dark:text-slate-200 transition-colors">
-          Fast replies. You&apos;ll receive a booking confirmation as soon as
-          possible.
-        </div>
-        <div className="rounded-3xl border border-green-500/20 bg-green-50 dark:bg-green-500/10 p-5 text-center text-sm text-green-900 dark:text-green-100 transition-colors">
-          Payment accepted: USDT is also acceptable.
-        </div>
+      <div className="mt-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/80 px-4 py-3 text-center text-sm text-slate-600 dark:text-slate-300 transition-colors">
+        Quick booking via LINE, WhatsApp, or WeChat. USDT accepted.
       </div>
     </Modal>
   );

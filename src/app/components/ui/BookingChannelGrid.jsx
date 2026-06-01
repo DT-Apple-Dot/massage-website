@@ -2,7 +2,7 @@ import React from "react";
 
 const BookingChannelGrid = ({ channels }) => {
   return (
-    <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+    <div className="mt-5 space-y-2">
       {channels.map((channel) => {
         const IconComponent = channel.icon;
         return (
@@ -11,11 +11,14 @@ const BookingChannelGrid = ({ channels }) => {
             href={channel.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${channel.bg} flex min-h-[170px] flex-col items-center justify-center gap-4 rounded-3xl border border-gray-300 dark:border-white/10 px-6 py-6 text-center transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-300/20 dark:hover:shadow-slate-900/20`}
+            className={`${channel.bg} flex items-center justify-between gap-4 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-sm text-gray-900 dark:text-white transition duration-200 hover:border-amber-500 dark:hover:border-amber-500 hover:shadow-sm`}
           >
-            <IconComponent className={`${channel.color} text-4xl`} />
-            <span className="text-base font-semibold text-gray-900 dark:text-white transition-colors">
-              {channel.name}
+            <div className="flex items-center gap-3">
+              <IconComponent className={`${channel.color} text-xl`} />
+              <span className="font-medium">{channel.name}</span>
+            </div>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+              Book
             </span>
           </a>
         );
