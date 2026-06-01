@@ -16,18 +16,18 @@ export const metadata = {
     title: "Bangkok Massage | Grand Massage Outcall Service",
     description:
       "Grand Massage delivers premium Bangkok outcall massage services directly to your hotel or home.",
-    url: "https://yoursite.com",
+    url: "https://massage-website-six.vercel.app/",
     type: "website",
-    image: "https://yoursite.com/images/projects/Slide1.jpg",
+    image: "https://massage-website-six.vercel.app//images/projects/Slide1.jpg",
   },
   twitter: {
     card: "summary_large_image",
     title: "Bangkok Massage | Grand Massage Outcall Service",
     description:
       "Premium Bangkok massage and outcall massage services for hotel and home guests.",
-    image: "https://yoursite.com/images/projects/Slide1.jpg",
+    image: "https://massage-website-six.vercel.app//images/projects/Slide1.jpg",
   },
-  canonical: "https://yoursite.com",
+  canonical: "https://massage-website-six.vercel.app/",
 };
 
 export const viewport = {
@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
           content="bangkok massage, bangkok outcall massage, grand massage, outcall massage Bangkok, Thai massage Bangkok, hotel massage Bangkok"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://yoursite.com" />
+        <link rel="canonical" href="https://massage-website-six.vercel.app/" />
         <link rel="icon" href="/favicon.ico" />
 
         {/* Google Search Console */}
@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
               name: "Grand Massage",
               description:
                 "Grand Massage offers premium Bangkok massage and Bangkok outcall massage services delivered to your hotel or home.",
-              url: "https://yoursite.com",
+              url: "https://massage-website-six.vercel.app/",
               telephone: "+66XXXXXXXXX",
               email: "info@grandmassage.com",
               address: {
@@ -77,7 +77,8 @@ export default function RootLayout({ children }) {
                 addressLocality: "Bangkok",
                 addressCountry: "TH",
               },
-              image: "https://yoursite.com/images/projects/Slide1.jpg",
+              image:
+                "https://massage-website-six.vercel.app//images/projects/Slide1.jpg",
               serviceArea: {
                 "@type": "City",
                 name: "Bangkok",
