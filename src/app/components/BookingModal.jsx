@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import Modal from "./ui/Modal";
-import BookingChannelGrid from "./ui/BookingChannelGrid";
+import BookingButtons from "./BookingButtons";
 import { bookingChannels } from "./bookingChannels";
 
 const BookingModal = ({ isOpen, onClose, title }) => {
@@ -27,7 +27,7 @@ const BookingModal = ({ isOpen, onClose, title }) => {
         </button>
       </div>
 
-      <BookingChannelGrid channels={bookingChannels} />
+      <BookingButtons />
 
       <div className="mt-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/80 px-4 py-3 text-center text-sm text-slate-600 dark:text-slate-300 transition-colors">
         Quick booking via LINE, WhatsApp, or WeChat. USDT accepted.
