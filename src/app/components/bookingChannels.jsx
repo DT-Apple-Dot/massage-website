@@ -23,5 +23,6 @@ export const bookingChannels = [
     url: "https://u.wechat.com/kNoUN3m9KNbw49z2F4BRI94?s=2",
     color: "text-emerald-500",
     bg: "bg-emerald-500/10 hover:bg-emerald-500/20",
+    wechatId: "Naeun2102",
   },
 ];
