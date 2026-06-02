@@ -7,6 +7,7 @@ export default function BookingButtons() {
   const [copied, setCopied] = useState(false);
 
   const handleChannelClick = async (e, channel) => {
+    // Special handling for WeChat: copy ID to clipboard and attempt to open app
     if (channel.name === "WeChat") {
       e.preventDefault();
 
@@ -15,13 +16,16 @@ export default function BookingButtons() {
       try {
         await navigator.clipboard.writeText(weChatId);
         setCopied(true);
-        alert(`WeChat ID (${weChatId})`);
+        alert(
+          `WeChat ID (${weChatId}) copied! Search for this ID in WeChat and add as friend.`,
+        );
 
+        // Try to open WeChat app on mobile
         window.location.href = "weixin://";
 
         setTimeout(() => setCopied(false), 3000);
       } catch (err) {
-        console.error("Failed to copy", err);
+        console.error("Failed to copy WeChat ID", err);
       }
     }
   };
