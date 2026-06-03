@@ -53,6 +53,34 @@ const Navbar = ({ navLinks, locale, onLocaleChange }) => {
         </div>
 
         <div className="flex items-center gap-4">
+          {/* Mobile language buttons (visible only on small screens) */}
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              type="button"
+              onClick={() => onLocaleChange("en")}
+              aria-label="Switch to English"
+              className={`rounded-full border px-3 py-1 text-sm font-medium transition-colors ${
+                locale === "en"
+                  ? "bg-slate-900 text-white border-slate-900"
+                  : "bg-white text-slate-700 border-slate-300 dark:bg-[#1F2937] dark:text-slate-200 dark:border-slate-600"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              onClick={() => onLocaleChange("zh")}
+              aria-label="Switch to Chinese"
+              className={`rounded-full border px-3 py-1 text-sm font-medium transition-colors ${
+                locale === "zh"
+                  ? "bg-slate-900 text-white border-slate-900"
+                  : "bg-white text-slate-700 border-slate-300 dark:bg-[#1F2937] dark:text-slate-200 dark:border-slate-600"
+              }`}
+            >
+              中文
+            </button>
+          </div>
+
           <div className="mobile-menu block md:hidden">
             {!navbarOpen ? (
               <button
