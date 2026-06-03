@@ -6,23 +6,7 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import ThemeToggle from "./ThemeToggle";
-
-const navLinks = [
-  {
-    title: "About",
-    path: "#about",
-  },
-  {
-    title: "Services",
-    path: "#projects",
-  },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
-];
-
-const Navbar = () => {
+const Navbar = ({ navLinks, locale, onLocaleChange }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const handleLinkClick = () => {
@@ -41,6 +25,33 @@ const Navbar = () => {
             className="h-16 sm:h-20 w-auto object-contain bg-transparent"
           />
         </Link>
+
+        <div className="hidden md:flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => onLocaleChange("en")}
+            className={`rounded-full border px-3 py-1 text-sm font-medium transition-colors ${
+              locale === "en"
+                ? "bg-slate-900 text-white border-slate-900"
+                : "bg-white text-slate-700 border-slate-300 dark:bg-[#1F2937] dark:text-slate-200 dark:border-slate-600"
+            }`}
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            onClick={() => onLocaleChange("zh")}
+            className={`rounded-full border px-3 py-1 text-sm font-medium transition-colors ${
+              locale === "zh"
+                ? "bg-slate-900 text-white border-slate-900"
+                : "bg-white text-slate-700 border-slate-300 dark:bg-[#1F2937] dark:text-slate-200 dark:border-slate-600"
+            }`}
+          >
+            中文
+          </button>
+          
+        </div>
+
         <div className="flex items-center gap-4">
           <div className="mobile-menu block md:hidden">
             {!navbarOpen ? (
@@ -60,6 +71,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
+
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 items-center">
             {navLinks.map((link, index) => (
@@ -74,7 +86,12 @@ const Navbar = () => {
         </div>
       </div>
       {navbarOpen && (
-        <MenuOverlay links={navLinks} handleLinkClick={handleLinkClick} />
+        <MenuOverlay
+          links={navLinks}
+          handleLinkClick={handleLinkClick}
+          locale={locale}
+          onLocaleChange={onLocaleChange}
+        />
       )}
     </nav>
   );

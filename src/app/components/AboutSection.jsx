@@ -3,13 +3,14 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import Card from "./ui/Card";
 
 const SLIDER_IMAGES = [
   "/images/projects/Slide1.jpg",
   "/images/projects/Slide2.jpg",
 ];
 
-const Aboutsection = () => {
+const Aboutsection = ({ content }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 4000, stopOnInteraction: false }),
@@ -29,9 +30,9 @@ const Aboutsection = () => {
     >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="w-full max-w-[500px] mx-auto">
-          <div
-            className="overflow-hidden rounded-3xl bg-gray-200 dark:bg-[#181818] shadow-lg transition-colors"
+          <Card
             ref={emblaRef}
+            className="overflow-hidden rounded-3xl bg-gray-200 dark:bg-[#181818] shadow-lg transition-colors"
           >
             <div className="flex">
               {SLIDER_IMAGES.map((src, index) => (
@@ -49,7 +50,7 @@ const Aboutsection = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </Card>
 
           <div className="flex justify-center gap-2 mt-4">
             {SLIDER_IMAGES.map((_, index) => (
@@ -69,24 +70,13 @@ const Aboutsection = () => {
 
         <div className="mt-6 md:mt-0 text-left flex flex-col h-full ">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 tracking-wide transition-colors">
-            ABOUT US
+            {content.heading}
           </h2>
 
           <div className="text-base lg:text-lg space-y-4 text-gray-700 dark:text-[#ADB7BE] leading-relaxed transition-colors">
-            <p>
-              Our experienced and qualified therapists are dedicated to
-              relieving stress, reducing muscle tension, and restoring physical
-              balance. Every outcall massage service is performed with
-              professionalism, hygiene, and care, ensuring a relaxing experience
-              tailored to your needs.
-            </p>
-
-            <p>
-              Your comfort is our top priority. Whether you are looking for a
-              massage at your place after a long day, travel fatigue recovery,
-              or regular wellness support, The Best Relax Massage provides a
-              reliable and discreet professional outcall massage you can trust.
-            </p>
+            {content.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </div>

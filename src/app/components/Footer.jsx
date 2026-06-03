@@ -3,7 +3,7 @@ import { FaWhatsapp, FaWeixin } from "react-icons/fa";
 import { SiLine } from "react-icons/si";
 import { FaMapLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
 
-const Footer = () => {
+const Footer = ({ content }) => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -83,16 +83,24 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-gray-900 dark:text-white font-semibold text-lg mb-6 transition-colors">
-              Quick Links
+              {content.quickLinksHeading || "Quick Links"}
             </h4>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
+              {content.quickLinks.map((label) => (
+                <li key={label}>
                   <a
-                    href={link.href}
+                    href={
+                      label === "Home" || label === "首页"
+                        ? "#"
+                        : label === "Services" || label === "服务"
+                          ? "#projects"
+                          : label === "About" || label === "关于"
+                            ? "#about"
+                            : "#contact"
+                    }
                     className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 text-sm"
                   >
-                    {link.label}
+                    {label}
                   </a>
                 </li>
               ))}
@@ -102,10 +110,10 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-gray-900 dark:text-white font-semibold text-lg mb-6 transition-colors">
-              Our Services
+              {content.servicesHeading || "Our Services"}
             </h4>
             <ul className="space-y-3">
-              {services.map((service) => (
+              {content.services.map((service) => (
                 <li key={service}>
                   <a
                     href="#projects"
@@ -121,7 +129,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-gray-900 dark:text-white font-semibold text-lg mb-6 transition-colors">
-              Contact Info
+              {content.contactHeading}
             </h4>
             <div className="space-y-4">
               <div className="flex gap-3 items-start">
@@ -130,7 +138,7 @@ const Footer = () => {
                   href="tel:+66XXXXXXXXX"
                   className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 text-sm"
                 >
-                  +66 (XX) XXX-XXXX
+                  +66 98 776 8734
                 </a>
               </div>
               <div className="flex gap-3 items-start">
@@ -139,7 +147,7 @@ const Footer = () => {
                   href="mailto:info@grandmassage.com"
                   className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 text-sm"
                 >
-                  info@grandmassage.com
+                  Grandmassage91@gmail.com
                 </a>
               </div>
               <div className="flex gap-3 items-start">
