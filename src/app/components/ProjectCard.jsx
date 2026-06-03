@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import BookingModal from "./BookingModal";
 import Button from "./ui/Button";
 import PricingList from "./ui/PricingList";
+import Image from "next/image";
 
 const ProjectCard = ({ imgUrl, title, description, prices = [] }) => {
   const [showBookingModal, setShowBookingModal] = useState(false);
@@ -10,11 +11,12 @@ const ProjectCard = ({ imgUrl, title, description, prices = [] }) => {
     <>
       <div className="bg-gray-50 dark:bg-[#181818] rounded-xl overflow-hidden flex flex-col justify-between hover:shadow-xl hover:shadow-amber-500/20 dark:hover:shadow-amber-500/20 transition-shadow duration-300 border border-gray-200 dark:border-gray-800">
         <div className="h-48 sm:h-56 md:h-64 lg:h-72 rounded-t-xl overflow-hidden relative group">
-          <img
+          <Image
             src={imgUrl}
             alt={title}
-            loading="lazy"
-            className="w-full h-full object-cover object-center"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
 
