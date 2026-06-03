@@ -49,7 +49,6 @@ const Navbar = ({ navLinks, locale, onLocaleChange }) => {
           >
             中文
           </button>
-          
         </div>
 
         <div className="flex items-center gap-4">
