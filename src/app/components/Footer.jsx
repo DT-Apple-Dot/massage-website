@@ -1,9 +1,13 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import WeChatQRCodeModal from "./WeChatQRCodeModal";
 import { FaWhatsapp, FaWeixin } from "react-icons/fa";
 import { SiLine } from "react-icons/si";
 import { FaMapLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
 
 const Footer = ({ content }) => {
+  const [showWeChatQR, setShowWeChatQR] = useState(false);
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -63,7 +67,20 @@ const Footer = ({ content }) => {
             <div className="flex gap-5">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon;
-                return (
+                const isWeChat = social.name === "WeChat";
+
+                return isWeChat ? (
+                  <button
+                    key={social.name}
+                    type="button"
+                    onClick={() => setShowWeChatQR(true)}
+                    className={`${social.color} text-xl transition-all duration-300 hover:scale-125 hover:brightness-125`}
+                    title={social.name}
+                    aria-label={social.name}
+                  >
+                    <IconComponent />
+                  </button>
+                ) : (
                   <a
                     key={social.name}
                     href={social.url}
@@ -183,6 +200,12 @@ const Footer = ({ content }) => {
             </div>
           </div>
         </div>
+        {showWeChatQR && (
+          <WeChatQRCodeModal
+            isOpen={showWeChatQR}
+            onClose={() => setShowWeChatQR(false)}
+          />
+        )}
       </div>
     </footer>
   );
