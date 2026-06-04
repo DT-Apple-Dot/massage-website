@@ -1,7 +1,7 @@
 export default function sitemap() {
   return [
     {
-      url: "https://massage-website-six.vercel.app",
+      url: "https://grandmassage.org/",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,

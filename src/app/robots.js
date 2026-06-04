@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://massage-website-six.vercel.app/sitemap.xml",
+    sitemap: "https://grandmassage.org/sitemap.xml",
   };
 }

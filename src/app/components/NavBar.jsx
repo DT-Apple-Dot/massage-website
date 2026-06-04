@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
-import ThemeToggle from "./ThemeToggle";
 const Navbar = ({ navLinks, locale, onLocaleChange }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -106,9 +105,6 @@ const Navbar = ({ navLinks, locale, onLocaleChange }) => {
                 <NavLink href={link.path} title={link.title} />
               </li>
             ))}
-            <li>
-              <ThemeToggle />
-            </li>
           </ul>
         </div>
       </div>

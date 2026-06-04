@@ -84,19 +84,6 @@ const siteContent = {
       },
       {
         id: 4,
-        title: "Four Hands Massage",
-        description:
-          "Four Hands Massage is a treatment performed by two therapists working simultaneously. This synchronized massage aims to create a deeply relaxing and immersive experience.",
-        image: "/images/projects/4hands.jpg",
-        tag: ["All", "Mobile"],
-        prices: [
-          { duration: "60 minutes", price: "2200 Baht" },
-          { duration: "90 minutes", price: "2400 Baht" },
-          { duration: "120 minutes", price: "2500 Baht" },
-        ],
-      },
-      {
-        id: 5,
         title: "Deep tissue massage",
         description:
           "A deep relaxation massage for the muscles. This massage techniques involve use of thumb and elbow for deep pressing. Pressure is rolled along muscles slowly and heavily to stimulate deeper muscle layers. The focus is on legs back & shoulders to help relieve locked-in muscle tension. This massage is a whole-body massage suitable for those who like moderate to heavy massage. Not recommended as a first massage experience.",
