@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://grandmassage.org/"),
+  metadataBase: new URL("https://www.grandmassage.org/"),
 
   title: "Bangkok Massage | Grand Massage Outcall Service in Bangkok",
 
@@ -64,8 +64,8 @@ export default function RootLayout({ children }) {
     name: "Grand Massage",
     description:
       "Professional Bangkok outcall massage and hotel massage services by Grand Massage. Expert Thai therapists for relaxing treatments in Bangkok.",
-    url: "https://grandmassage.org/",
-    image: "https://grandmassage.org/images/projects/Slide1.jpg",
+    url: "https://www.grandmassage.org/",
+    image: "https://www.grandmassage.org/images/projects/Slide1.jpg",
 
     address: {
       "@type": "PostalAddress",

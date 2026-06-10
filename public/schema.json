@@ -3,7 +3,7 @@
   "@type": "LocalBusiness",
   "name": "Grand Massage",
   "description": "Premium outcall massage services in Bangkok",
-  "url": "https://yoursite.com",
+  "url": "https://www.grandmassage.org",
   "telephone": "+66XXXXXXXXX",
   "email": "info@grandmassage.com",
   "address": {
@@ -17,7 +17,7 @@
     "https://facebook.com/",
     "https://line.me/"
   ],
-  "image": "https://yoursite.com/images/projects/Slide1.jpg",
+  "image": "https://www.grandmassage.org/images/projects/Slide1.jpg",
   "serviceArea": {
     "@type": "City",
     "name": "Bangkok"
