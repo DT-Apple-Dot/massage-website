@@ -90,6 +90,13 @@ export default function RootLayout({ children }) {
         />
 
         <script
+          id="usercentrics-cmp"
+          src="https://app.usercentrics.eu/browser-ui/latest/loader.js"
+          data-settings-id="jUXvy7bPX49r-M"
+          async
+        />
+
+        <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-86VVFWXPG4"
         />
