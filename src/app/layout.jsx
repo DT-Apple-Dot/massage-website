@@ -89,6 +89,20 @@ export default function RootLayout({ children }) {
           content="XVQDPmlcXH8yXuE7tGuZLsyXBdeAoie6R1vdRgcYwOQ"
         />
 
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-86VVFWXPG4"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-86VVFWXPG4');`,
+          }}
+        />
+
         <link rel="icon" href="/favicon.ico" />
 
         <script
